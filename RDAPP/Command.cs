@@ -45,21 +45,4 @@ namespace RDAPP
         }
     }
 
-    public class CurrentRectangle : Command
-    {
-        private Triger _oppetation;
-        private RDPSession _currentSession;
-
-        public CurrentRectangle
-            (Triger Opperation,RDPSession currentSession)
-        {
-            _oppetation = Opperation;
-            _currentSession = currentSession;
-        }
-
-        public List<String> Execute()
-        {
-           return  _oppetation.DesktopRectangle();
-        }
-    }
 }
