@@ -49,19 +49,20 @@ namespace RDAPP
 
             String text = Encoding.ASCII.GetString(dataBuff);
             Console.WriteLine("Text Recived : " + text);
-
             /* Contrall commands */
             ///////////////////////////////////////////////////////////////////////////////
             string response = string.Empty;
             Triger triger = new Triger();
             Command requestActiveList =
                 new ActiveWindowList(triger, Server.currentSession);
+            Command requestCurrentDesktopSize =
+                new CurrentRectangle(triger, Server.currentSession);
 
             Switch click = new Switch();
 
             if (text.ToLower() == "")/////Not Completed
             {
-
+                //response = listToString(click.StoreAndExecute(requestCurrentDesktopSize));
             }
             else if (text.ToLower() == "get list")
             {
