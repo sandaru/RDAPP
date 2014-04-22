@@ -55,14 +55,12 @@ namespace RDAPP
             Triger triger = new Triger();
             Command requestActiveList =
                 new ActiveWindowList(triger, Server.currentSession);
-            Command requestCurrentDesktopSize =
-                new CurrentRectangle(triger, Server.currentSession);
 
             Switch click = new Switch();
 
-            if (text.ToLower() == "")/////Not Completed
+            if (text.ToLower() == "")
             {
-                //response = listToString(click.StoreAndExecute(requestCurrentDesktopSize));
+
             }
             else if (text.ToLower() == "get list")
             {
